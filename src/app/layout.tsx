@@ -13,9 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Import Apex Mk2 from CDN */}
-        <link href="https://fonts.cdnfonts.com/css/apex-mk2" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"rel="stylesheet"/>
+        {/* Remove custom font imports */}
       </head>
       <body className={`antialiased`}>
         {children}

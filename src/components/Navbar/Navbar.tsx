@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full fixed top-0 left-0 flex backdrop-blur-[50px] bg-black/30 justify-center z-[1000] pb-[8px]">
+    <div className="w-full fixed top-0 left-0 flex backdrop-blur-[50px] bg-white/30 justify-center z-[1000] pb-[8px]">
       <nav className="w-full max-w-[1320px] h-[60px] md:h-[80px] flex items-center justify-between px-4 md:px-6">
         {/* Logo Section */}
         <div className="flex items-center">
@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Navigation (Hidden on Mobile) */}
         <ul className="hidden md:flex gap-[35px] font-apex font-normal text-black">
-          <li className="relative font-bold text-[#DE0308] text-[16px] md:text-[18px]">
+          <li className="relative font-bold text-[#DE0308] text-[16px] md:text-[18px] after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[2px] after:bg-[#DE0308]">
             HOME
           </li>
           <li className="text-black font-normal text-[16px] md:text-[18px]">
