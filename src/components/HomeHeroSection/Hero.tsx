@@ -6,20 +6,22 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   const [animate, setAnimate] = useState(false);
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      const sectionTop = sectionRef.current?.getBoundingClientRect().top;
-      const triggerPoint = window.innerHeight * 0.75;
-      if (sectionTop < triggerPoint) setAnimate(true);
+      if (sectionRef.current) {
+        const sectionTop = sectionRef.current.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight * 0.75;
+        if (sectionTop < triggerPoint) setAnimate(true);
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden h-full">
       {/* Heading Section */}
       <div className="absolute text-center w-full top-[13%] left-1/2 transform -translate-x-1/2 px-4">
         <h1 className="font-apex font-normal tracking-wider text-[clamp(32px,8vw,96px)] leading-[clamp(40px,10vw,102px)] mb-0">
@@ -32,7 +34,7 @@ const HeroSection = () => {
       </div>
 
       {/* Image Section */}
-      <div className="absolute flex items-center justify-center sm:flex-row flex-col top-[63%] left-[49%] transform -translate-x-1/2">
+      <div className="absolute flex items-center justify-center sm:flex-row flex-row top-[63%] left-[49%] transform -translate-x-1/2">
         <motion.div
           className="absolute w-[800px] h-[400px] bg-red-500 opacity-30 shadow-lg sm:block blur-[100px]"
           initial={{ opacity: 0 }}
@@ -41,75 +43,65 @@ const HeroSection = () => {
         />
 
         {/* Hero Images with Looping Animations */}
-        <motion.img
-          src="/herosection/1.png"
-          alt="Hero Image 1"
-          width={225.69}
-          height={300.71}
+        <motion.div
           className="absolute -rotate-4 sm:left-[-180px] sm:top-[42px] sm:block opacity-100"
           animate={{ x: [-200, 0, -200] }}
           transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        />
-        <motion.img
-          src="/herosection/2.png"
-          alt="Hero Image 2"
-          width={266.67}
-          height={355.31}
+        >
+          <Image src="/herosection/1.png" alt="Hero Image 1" width={225.69} height={300.71} priority />
+        </motion.div>
+
+        <motion.div
           className="absolute -rotate-4 sm:left-[-100px] sm:top-[50px] sm:block opacity-100"
           animate={{ x: [-100, 0, -100] }}
           transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        />
-        <motion.img
-          src="/herosection/3.png"
-          alt="Hero Image 3"
-          width={308.36}
-          height={410.96}
+        >
+          <Image src="/herosection/2.png" alt="Hero Image 2" width={266.67} height={355.31} priority />
+        </motion.div>
+
+        <motion.div
           className="relative z-20 rounded-lg sm:block opacity-100"
           animate={{ y: [0, -30, 0] }}
           transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        />
-        <motion.img
-          src="/herosection/5.png"
-          alt="Hero Image 5"
-          width={225.69}
-          height={300.71}
+        >
+          <Image src="/herosection/3.png" alt="Hero Image 3" width={308.36} height={410.96} priority />
+        </motion.div>
+
+        <motion.div
           className="absolute rotate-4 sm:right-[-180px] sm:top-[42px] sm:block opacity-100"
           animate={{ x: [200, 0, 200] }}
           transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        />
-        <motion.img
-          src="/herosection/4.png"
-          alt="Hero Image 4"
-          width={266.67}
-          height={355.31}
+        >
+          <Image src="/herosection/5.png" alt="Hero Image 5" width={225.69} height={300.71} priority />
+        </motion.div>
+
+        <motion.div
           className="absolute rotate-4 sm:right-[-100px] sm:top-[50px] sm:block opacity-100"
           animate={{ x: [100, 0, 100] }}
           transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        />
+        >
+          <Image src="/herosection/4.png" alt="Hero Image 4" width={266.67} height={355.31} priority />
+        </motion.div>
       </div>
 
       {/* Background Hands */}
       <div className="relative min-h-screen" ref={sectionRef}>
-        <motion.img
-          src="/herosection/left-hand.png"
-          alt="Left Background"
-          width={548.8}
-          height={613.89}
+        <motion.div
           className="absolute sm:block top-[80%] left-[-6%] object-contain opacity-100"
           initial={{ x: -200, opacity: 0 }}
           animate={animate ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 1.5 }}
-        />
-        <motion.img
-          src="/herosection/right-hand.png"
-          alt="Right Background"
-          width={548.8}
-          height={613.89}
+        >
+          <Image src="/herosection/left-hand.png" alt="Left Background" width={548.8} height={613.89} priority />
+        </motion.div>
+        <motion.div
           className="absolute sm:block top-[80%] right-[-6%] object-contain opacity-100"
           initial={{ x: 200, opacity: 0 }}
           animate={animate ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 1.5 }}
-        />
+        >
+          <Image src="/herosection/right-hand.png" alt="Right Background" width={548.8} height={613.89} priority />
+        </motion.div>
       </div>
     </div>
   );
