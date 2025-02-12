@@ -19,8 +19,8 @@ const Hero = () => {
         setContainerHeight(`${requiredHeight}px`);
       }
 
-      // Show hands only if the width is greater than or equal to 1700px
-      setShowHands(window.innerWidth >= 1700);
+      // Show hands only if the width is greater than or equal to 1600px
+      setShowHands(window.innerWidth >= 1600);
     };
 
     handleResize(); // Set initial height and visibility
@@ -52,60 +52,66 @@ const Hero = () => {
           Discover and trade unique digital art pieces on our NFT website,
           <br /> where creativity meets blockchain technology.
         </p>
+        <div className="absolute lg:hidden flex items-center justify-center w-full left-1/2 transform -translate-x-1/2 mt-20">
+        <Image src="/herosection/3.png" alt="Hero Image 3" width={308.36} height={410.96} />
+        </div>
+
       </div>
 
-      {/* Image Section */}
-      <div className="absolute flex items-center justify-center sm:flex-row flex-row top-[45%] left-[49%] transform -translate-x-1/2">
-        <motion.div
-          className="absolute bg-red-500 opacity-30 shadow-lg sm:block blur-[100px]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.5 }}
-          transition={{ duration: 6 }}
-        />
+      {/* Image Section (Visible only on lg screens and above) */}
+      <div className="hidden lg:block">
+        <div className="absolute flex items-center justify-center sm:flex-row flex-row top-[45%] left-[49%] transform -translate-x-1/2">
+          <motion.div
+            className="absolute bg-red-500 opacity-30 shadow-lg sm:block blur-[100px]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.5 }}
+            transition={{ duration: 6 }}
+          />
 
-        {/* Hero Images with Looping Animations */}
-        <motion.div
-          className="absolute -rotate-4 sm:left-[-180px] sm:top-[42px] sm:block opacity-100"
-          animate={{ x: [-170, 0, -170] }}
-          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        >
-          <Image src="/herosection/1.png" alt="Hero Image 1" width={225.69} height={300.71} priority />
-        </motion.div>
+          {/* Hero Images with Looping Animations */}
+          <motion.div
+            className="absolute -rotate-4 sm:left-[-180px] sm:top-[42px] sm:block opacity-100"
+            animate={{ x: [-170, 0, -170] }}
+            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+          >
+            <Image src="/herosection/1.png" alt="Hero Image 1" width={225.69} height={300.71} priority />
+          </motion.div>
 
-        <motion.div
-          className="absolute -rotate-4 sm:left-[-100px] sm:top-[50px] sm:block opacity-100"
-          animate={{ x: [-100, 0, -100] }}
-          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        >
-          <Image src="/herosection/2.png" alt="Hero Image 2" width={266.67} height={355.31} priority />
-        </motion.div>
+          <motion.div
+            className="absolute -rotate-4 sm:left-[-100px] sm:top-[50px] sm:block opacity-100"
+            animate={{ x: [-100, 0, -100] }}
+            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+          >
+            <Image src="/herosection/2.png" alt="Hero Image 2" width={266.67} height={355.31} priority />
+          </motion.div>
 
-        <motion.div
-          className="relative z-20 rounded-lg sm:block opacity-100"
-          animate={{ y: [0, -30, 0] }}
-          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        >
-          <Image src="/herosection/3.png" alt="Hero Image 3" width={308.36} height={410.96} priority />
-        </motion.div>
+          <motion.div
+            className="relative z-20 rounded-lg sm:block opacity-100"
+            animate={{ y: [0, -30, 0] }}
+            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+          >
+            <Image src="/herosection/3.png" alt="Hero Image 3" width={308.36} height={410.96} priority />
+          </motion.div>
 
-        <motion.div
-          className="absolute rotate-4 sm:right-[-180px] sm:top-[42px] sm:block opacity-100"
-          animate={{ x: [170, 0, 170] }}
-          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        >
-          <Image src="/herosection/5.png" alt="Hero Image 5" width={225.69} height={300.71} priority />
-        </motion.div>
+          <motion.div
+            className="absolute rotate-4 sm:right-[-180px] sm:top-[42px] sm:block opacity-100"
+            animate={{ x: [170, 0, 170] }}
+            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+          >
+            <Image src="/herosection/5.png" alt="Hero Image 5" width={225.69} height={300.71} priority />
+          </motion.div>
 
-        <motion.div
-          className="absolute rotate-4 sm:right-[-100px] sm:top-[50px] sm:block opacity-100"
-          animate={{ x: [100, 0, 100] }}
-          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        >
-          <Image src="/herosection/4.png" alt="Hero Image 4" width={266.67} height={355.31} priority />
-        </motion.div>
+          <motion.div
+            className="absolute rotate-4 sm:right-[-100px] sm:top-[50px] sm:block opacity-100"
+            animate={{ x: [100, 0, 100] }}
+            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+          >
+            <Image src="/herosection/4.png" alt="Hero Image 4" width={266.67} height={355.31} priority />
+          </motion.div>
+        </div>
       </div>
 
-      {/* Background Hands (Hidden when width < 1700px) */}
+      {/* Background Hands (Hidden when width < 1600px) */}
       {showHands && (
         <div className="relative top-[50%]" ref={sectionRef}>
           <motion.div

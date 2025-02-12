@@ -52,10 +52,10 @@ const Navbar: React.FC = () => {
       {isOpen && (
         <>
           {/* Background Overlay */}
-          <div className="fixed inset-0 bg-black/30 backdrop-blur-[2px] transition-opacity duration-300"></div>
+          <div className="fixed inset-0 h-screen bg-black/30 backdrop-blur-[2px] transition-opacity duration-300"></div>
 
           {/* Sidebar */}
-          <div className="fixed left-0 top-0 h-full w-[77%] bg-white z-[999] p-3 flex flex-col">
+          <div className="fixed left-0 top-0 h-screen w-[77%] bg-white z-[999] p-3 flex flex-col">
             {/* Close Button & Logo */}
             <div className="flex justify-between items-center mb-6">
               <Image
