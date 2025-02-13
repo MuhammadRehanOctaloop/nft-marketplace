@@ -53,7 +53,7 @@ const Hero = () => {
           <br /> where creativity meets blockchain technology.
         </p>
         <div className="absolute lg:hidden flex items-center justify-center w-full left-1/2 transform -translate-x-1/2 mt-20">
-        <Image src="/herosection/3.png" alt="Hero Image 3" width={308.36} height={410.96} />
+        <Image src="/home/herosection/3.png" alt="Hero Image 3" width={308.36} height={410.96} />
         </div>
 
       </div>
@@ -74,7 +74,7 @@ const Hero = () => {
             animate={{ x: [-170, 0, -170] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
           >
-            <Image src="/herosection/1.png" alt="Hero Image 1" width={225.69} height={300.71} priority />
+            <Image src="/home/herosection/1.png" alt="Hero Image 1" width={225.69} height={300.71} priority />
           </motion.div>
 
           <motion.div
@@ -82,7 +82,7 @@ const Hero = () => {
             animate={{ x: [-100, 0, -100] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
           >
-            <Image src="/herosection/2.png" alt="Hero Image 2" width={266.67} height={355.31} priority />
+            <Image src="/home/herosection/2.png" alt="Hero Image 2" width={266.67} height={355.31} priority />
           </motion.div>
 
           <motion.div
@@ -90,7 +90,7 @@ const Hero = () => {
             animate={{ y: [0, -30, 0] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
           >
-            <Image src="/herosection/3.png" alt="Hero Image 3" width={308.36} height={410.96} priority />
+            <Image src="/home/herosection/3.png" alt="Hero Image 3" width={308.36} height={410.96} priority />
           </motion.div>
 
           <motion.div
@@ -98,7 +98,7 @@ const Hero = () => {
             animate={{ x: [170, 0, 170] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
           >
-            <Image src="/herosection/5.png" alt="Hero Image 5" width={225.69} height={300.71} priority />
+            <Image src="/home/herosection/5.png" alt="Hero Image 5" width={225.69} height={300.71} priority />
           </motion.div>
 
           <motion.div
@@ -106,7 +106,7 @@ const Hero = () => {
             animate={{ x: [100, 0, 100] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
           >
-            <Image src="/herosection/4.png" alt="Hero Image 4" width={266.67} height={355.31} priority />
+            <Image src="/home/herosection/4.png" alt="Hero Image 4" width={266.67} height={355.31} priority />
           </motion.div>
         </div>
       </div>
@@ -120,7 +120,7 @@ const Hero = () => {
             animate={animate ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 1.5 }}
           >
-            <Image src="/herosection/left-hand.png" alt="Left Background" width={548.8} height={613.89} priority />
+            <Image src="/home/herosection/left-hand.png" alt="Left Background" width={548.8} height={613.89} priority />
           </motion.div>
           <motion.div
             className="absolute sm:block right-[-6%] object-contain opacity-100"
@@ -128,7 +128,7 @@ const Hero = () => {
             animate={animate ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 1.5 }}
           >
-            <Image src="/herosection/right-hand.png" alt="Right Background" width={548.8} height={613.89} priority />
+            <Image src="/home/herosection/right-hand.png" alt="Right Background" width={548.8} height={613.89} priority />
           </motion.div>
         </div>
       )}
