@@ -15,6 +15,7 @@ const config: Config = {
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
         apex: ["Apex Mk2", "sans-serif"], // If Apex Mk2 is locally hosted
+        oxanium: ["Oxanium", "sans-serif"],
       },
     },
   },

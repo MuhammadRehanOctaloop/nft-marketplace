@@ -1,5 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/apex-mk2');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,4 +16,8 @@ body {
 
 .font-roboto {
   font-family: 'Roboto', sans-serif;
+}
+
+.font-oxanium {
+  font-family: 'Oxanium', sans-serif;
 }
