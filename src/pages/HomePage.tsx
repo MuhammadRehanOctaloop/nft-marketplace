@@ -5,14 +5,12 @@ import Section2 from "@/components/Home/Section2/Section2";
 
 export default function HomePage() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden bg-gradient-to-b from-white to-pink-200">
     <Navbar />
     {/* <div className="h-[1200px]"> */}
     <Hero />
     {/* </div> */}
-    <div className="mt-5">
     <Section2 />
-    </div>
     <Footer />
     </div>
   );
