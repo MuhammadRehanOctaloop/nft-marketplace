@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Card from "@/components/Card";
 import Image from "next/image";
@@ -19,20 +19,34 @@ const cards = [
 
 const Section2 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const slideAmount = 345; // Ensure this matches actual card width + margin
+  const [cardsToScroll, setCardsToScroll] = useState(1);
+  const cardWidth = 349.5; // Card width including margin
+
+  // Detect screen width and update cards to scroll
+  useEffect(() => {
+    const updateCardsToScroll = () => {
+      setCardsToScroll(window.innerWidth > 1100 ? 2 : 1);
+    };
+
+    updateCardsToScroll(); // Initial check
+    window.addEventListener("resize", updateCardsToScroll);
+    return () => window.removeEventListener("resize", updateCardsToScroll);
+  }, []);
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % cards.length);
+    setCurrentIndex((prev) => (prev + cardsToScroll) % cards.length);
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev - 1 + cards.length) % cards.length);
+    setCurrentIndex(
+      (prev) => (prev - cardsToScroll + cards.length) % cards.length
+    );
   };
 
   return (
     <div className="flex w-full max-w-[1391px] my-10 flex-wrap mx-auto">
-      <div className="flex flex-col w-full lg:flex-row text-left mb-10 items-center lg:items-end">
-        <div className="w-full">
+      <div className="flex flex-col w-full lg:flex-row mb-10 items-center lg:items-end">
+        <div className="w-full text-center lg:text-left">
           <p className="text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-tight tracking-[4%] font-[400] font-apex">
             Featured Collection
           </p>
@@ -44,7 +58,7 @@ const Section2 = () => {
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex flex-row gap-6 text-center mt-5 mr-8">
+        <div className="flex flex-row gap-6 text-center mt-5">
           <button
             onClick={handlePrev}
             className="items-center justify-center hover:scale-105 transition"
@@ -73,16 +87,14 @@ const Section2 = () => {
       </div>
 
       {/* Sliding Cards Container */}
-      <div className="w-full overflow-hidden">
+      <div className="w-full h-[457px] overflow-hidden">
         <motion.div
-          className="flex gap-6 flex-nowrap" // Prevents wrapping, maintains proper spacing
-          animate={{ x: -currentIndex * slideAmount }}
+          className="flex gap-5 h-full flex-nowrap"
+          animate={{ x: -currentIndex * cardWidth }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
         >
           {cards.map((card) => (
-            <div key={card.id} className="min-w-[325px]">
-              {" "}
-              {/* Ensures cards don’t shrink */}
+            <div key={card.id} className="min-w-[330px] my-auto">
               <Card imageUrl={card.imageUrl} />
             </div>
           ))}

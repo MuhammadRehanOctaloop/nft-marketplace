@@ -7,15 +7,15 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ imageUrl }) => {
   return (
     <div
-      className="relative w-[308px] h-[411px] rounded-lg shadow-2lg"
+      className="relative w-[308px] h-[411px] rounded-3xl shadow-lg hover:scale-105 transition"
       style={{
-        backgroundImage: "url('/home/section2/cardbg.png')",
+        backgroundImage: "url('/card/cardbg.png')",
       }}
     >
       <div className="absolute p-3 pt-7 w-[292px] h-[411px] object-contain">
         <div className="flex absolute w-full h-[53.18] object-contain">
           <Image
-            src="/home/section2/cardUser.png"
+            src="/card/cardUser.png"
             alt="Card Image"
             width={53.18}
             height={53.18}
@@ -30,12 +30,32 @@ const Card: React.FC<CardProps> = ({ imageUrl }) => {
           </div>
         </div>
         <div className="absolute bottom-3 object-contain">
-        <Image
-        src={imageUrl}
-        alt="Card Image"
-        width={292}
-        height={314}
-        />
+          <Image src={imageUrl} alt="Card Image" width={292} height={314} />
+        </div>
+
+        {/* Button s */}
+        <div className="absolute flex gap-20 bottom-3 w-full object-contain p-3">
+          {/* Buy Button */}
+          <button className="px-4 py-2 text-white w-[56px] h-[36] font-semibold bg-gradient-to-tl from-[#FD0000] via-[#FD3B3B] to-[#FF9292] rounded-lg shadow-lg hover:scale-105 transition">
+            Buy
+          </button>
+
+          {/* Price Button */}
+          <div className="flex items-center w-[123.07px] h-[36.07px] bg-white shadow-md px-3 py-1 rounded-lg hover:scale-105 transition">
+            <span className="text-gray-800 font-roboto font-bold text-[12px] leading-[14.06px] tracking-[4%]">
+              Price:
+            </span>
+            <Image
+              src="/card/crypto.png" // Replace with your actual crypto icon
+              alt="Crypto Icon"
+              width={16}
+              height={16}
+              className="ml-2 mr-1"
+            />
+            <span className="text-gray-700 font-roboto font-normal text-[12px] leading-[14.06px] tracking-[4%]">
+              142.02
+            </span>
+          </div>
         </div>
       </div>
     </div>
