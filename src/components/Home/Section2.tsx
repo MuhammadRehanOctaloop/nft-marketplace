@@ -44,61 +44,63 @@ const Section2 = () => {
   };
 
   return (
-    <div className="flex w-full max-w-[1391px] my-10 flex-wrap mx-auto">
-      <div className="flex flex-col w-full lg:flex-row mb-10 items-center lg:items-end">
-        <div className="w-full text-center lg:text-left">
-          <p className="text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-tight tracking-[4%] font-[400] font-apex">
-            Featured Collection
-          </p>
-          <p className="mt-2 text-[14px] sm:text-[16px] md:text-[18px] leading-snug tracking-[3%] font-light font-roboto">
-            Explore our exclusive featured collection, showcasing innovative
-            campaigns and creative
-            <br /> storytelling from top brands around the world.
-          </p>
+    <div className="mx-8 mt-40">
+      <div className="flex w-full max-w-[1391px] my-10 flex-wrap mx-auto">
+        <div className="flex flex-col w-full lg:flex-row mb-10 items-center lg:items-end">
+          <div className="w-full text-center lg:text-left">
+            <p className="text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-tight tracking-[4%] font-[400] font-apex">
+              Featured Collection
+            </p>
+            <p className="mt-2 text-[14px] sm:text-[16px] md:text-[18px] leading-snug tracking-[3%] font-light font-roboto">
+              Explore our exclusive featured collection, showcasing innovative
+              campaigns and creative
+              <br /> storytelling from top brands around the world.
+            </p>
+          </div>
+
+          {/* Navigation Buttons */}
+          <div className="flex flex-row gap-4 text-center mt-3">
+            <button
+              onClick={handlePrev}
+              className="items-center justify-center hover:scale-105 transition"
+            >
+              <Image
+                src="/home/section2/leftButton.png"
+                alt="left Button"
+                width={40}
+                height={40}
+                className="w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px] lg:w-[55px] lg:h-[55px]"
+              />
+            </button>
+            <button
+              onClick={handleNext}
+              className="items-center justify-center hover:scale-105 transition"
+            >
+              <Image
+                src="/home/section2/rightButton.png"
+                alt="right Button"
+                width={40}
+                height={40}
+                className="w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px] lg:w-[55px] lg:h-[55px]"
+              />
+            </button>
+          </div>
         </div>
 
-        {/* Navigation Buttons */}
-        <div className="flex flex-row gap-6 text-center mt-5">
-          <button
-            onClick={handlePrev}
-            className="items-center justify-center hover:scale-105 transition"
+        {/* Sliding Cards Container */}
+        <div className="w-full h-[457px] overflow-hidden">
+          <motion.div
+            className="flex gap-5 h-full flex-nowrap"
+            animate={{ x: -currentIndex * cardWidth }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
           >
-            <Image
-              src="/home/section2/leftButton.png"
-              alt="left Button"
-              width={50}
-              height={50}
-              className="sm:w-[55px] sm:h-[55px] md:w-[60px] md:h-[60px] lg:w-[67.88px] lg:h-[67.88px]"
-            />
-          </button>
-          <button
-            onClick={handleNext}
-            className="items-center justify-center hover:scale-105 transition"
-          >
-            <Image
-              src="/home/section2/rightButton.png"
-              alt="right Button"
-              width={50}
-              height={50}
-              className="sm:w-[55px] sm:h-[55px] md:w-[60px] md:h-[60px] lg:w-[67.88px] lg:h-[67.88px]"
-            />
-          </button>
+            {cards.map((card) => (
+              <div key={card.id} className="min-w-[330px] my-auto">
+                <Card imageUrl={card.imageUrl} />
+              </div>
+            ))}
+          </motion.div>
         </div>
-      </div>
-
-      {/* Sliding Cards Container */}
-      <div className="w-full h-[457px] overflow-hidden">
-        <motion.div
-          className="flex gap-5 h-full flex-nowrap"
-          animate={{ x: -currentIndex * cardWidth }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
-        >
-          {cards.map((card) => (
-            <div key={card.id} className="min-w-[330px] my-auto">
-              <Card imageUrl={card.imageUrl} />
-            </div>
-          ))}
-        </motion.div>
       </div>
     </div>
   );
