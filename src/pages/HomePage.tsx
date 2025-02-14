@@ -10,7 +10,9 @@ export default function HomePage() {
     {/* <div className="h-[1200px]"> */}
     <Hero />
     {/* </div> */}
+    <div className="mx-10">
     <Section2 />
+    </div>
     <Footer />
     </div>
   );
