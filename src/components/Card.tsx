@@ -2,9 +2,10 @@ import Image from "next/image";
 
 interface CardProps {
   imageUrl: string;
+  isSold?: boolean; // New prop to control visibility of "Sold" button
 }
 
-const Card: React.FC<CardProps> = ({ imageUrl }) => {
+const Card: React.FC<CardProps> = ({ imageUrl, isSold }) => {
   return (
     <div
       className="relative w-[308px] h-[411px] rounded-3xl shadow-lg hover:scale-105 transition"
@@ -13,7 +14,7 @@ const Card: React.FC<CardProps> = ({ imageUrl }) => {
       }}
     >
       <div className="absolute p-3 pt-7 w-[292px] h-[411px] object-contain">
-        <div className="flex absolute w-full h-[53.18] object-contain">
+        <div className="flex absolute w-full h-[53.18px] object-contain">
           <Image
             src="/card/cardUser.png"
             alt="Card Image"
@@ -29,6 +30,8 @@ const Card: React.FC<CardProps> = ({ imageUrl }) => {
             </p>
           </div>
         </div>
+
+        {/* Card Image */}
         <div className="absolute bottom-3 object-contain">
           <Image src={imageUrl} alt="Card Image" width={292} height={314} />
         </div>
@@ -57,6 +60,14 @@ const Card: React.FC<CardProps> = ({ imageUrl }) => {
             </span>
           </div>
         </div>
+        {/* Sold Button (conditionally displayed) */}
+        {isSold && (
+          <div className="absolute bottom-3 left-3 w-[280px] h-[300px] flex justify-center rounded-2xl items-center bg-gray-500 bg-opacity-10 backdrop-blur-sm z-999">
+            <button className="px-4 py-2 text-white w-[96px] h-[37] font-semibold bg-gradient-to-tl from-[#FD0000] via-[#FD3B3B] to-[#FF9292] rounded-lg shadow-lg hover:scale-105 transition">
+              Sold
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

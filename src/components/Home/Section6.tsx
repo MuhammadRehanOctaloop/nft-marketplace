@@ -42,9 +42,9 @@ const sellers = [
   },
 ];
 
-export default function Topcollections() {
+export default function Section6() {
   return (
-    <div className="m-4 sm:m-6 md:m-8 mt-20 sm:mt-28 md:mt-40">
+    <div className="m-4 mt-40">
     <div className="max-w-[1316px] mx-auto">
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between items-center mb-6">
@@ -60,7 +60,7 @@ export default function Topcollections() {
       </div>
 
       {/* Change grid to flex with wrapping */}
-      <div className="max-w-[1316px] flex flex-wrap justify-center  gap-6">
+      <div className="max-w-[1316px] flex flex-wrap justify-center mt-16 gap-6">
         {sellers.map((seller, index) => (
           <div
             key={index}

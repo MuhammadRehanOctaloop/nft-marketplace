@@ -11,7 +11,7 @@ const sellers = [
   { name: "Jacob Jones", img: "/home/section4/8.png" },
 ];
 
-export default function TopSellers() {
+export default function Section4() {
   return (
     <div className="m-4 sm:m-6 md:m-8 mt-20 sm:mt-28 md:mt-40">
       <div className="max-w-[1316px] mx-auto">
