@@ -13,7 +13,7 @@ const cards = [
   { id: 8, imageUrl: "/home/Section2/cardImages/4.png" },
 ];
 
-const Section5 = () => {
+const Section7 = () => {
   return (
     <div className="m-10 mt-40">
       {/* Header */}
@@ -39,4 +39,4 @@ const Section5 = () => {
   );
 };
 
-export default Section5;
+export default Section7;
