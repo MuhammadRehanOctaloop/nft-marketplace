@@ -26,22 +26,24 @@ export default function TopSellers() {
             View All
           </a>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10 sm:mt-12 md:mt-16">
+
+        {/* Changed grid to flex with wrapping */}
+        <div className="flex flex-wrap justify-center lg:justify-between gap-6 mt-10 sm:mt-12 md:mt-16">
           {sellers.map((seller, index) => (
             <div
               key={index}
-              className="flex items-center space-x-3 rounded-xl hover:scale-105 transition-transform duration-300 p-2"
+              className="flex items-center justify-center space-x-3 rounded-xl hover:scale-105 transition-transform duration-300 p-2 w-[310px]"
             >
               <div className="relative">
                 <Image
                   src={seller.img}
                   alt={seller.name}
-                  width={116} // Adjusted for smaller screens
+                  width={116}
                   height={116}
-                  className="rounded-lg sm:w-[100px] sm:h-[100px] md:w-[116px] md:h-[116px]"
+                  className="rounded-lg"
                 />
               </div>
-              <div className="flex flex-col justify-end h-full">
+              <div className="flex flex-col !justify-end h-full">
                 <p className="font-roboto font-bold text-[22px] sm:text-[20px] md:text-[22px] leading-[25.78px] tracking-[0.5%]">
                   {seller.name}
                 </p>
