@@ -39,7 +39,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col items-center justify-center px-4 py-8">
+    <div className="w-full flex flex-col items-center justify-center px-4 mt-32">
       {/* Heading Section */}
       <h1 className="text-[clamp(32px,6vw,64px)] leading-[clamp(40px,8vw,130px)] font-bold text-center font-oxanium tracking-wider">
         Ready for Next NFT Drop?
