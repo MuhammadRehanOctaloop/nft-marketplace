@@ -20,7 +20,7 @@ const Section7 = () => {
       <div className="flex flex-col lg:flex-row max-w-[1316px] mx-auto mb-10 gap-5 items-center lg:items-end lg:justify-between">
         {/* Heading */}
         <p className="text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-tight tracking-wide font-apex w-full text-center lg:text-left">
-          Auction
+        Recently Sold
         </p>
       </div>
 

@@ -13,10 +13,10 @@ const sellers = [
 
 export default function Section4() {
   return (
-    <div className="m-4 sm:m-6 md:m-8 mt-20 sm:mt-28 md:mt-40">
+    <div className="m-10 mt-40">
       <div className="max-w-[1316px] mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-center mb-6">
-          <p className="text-[28px] sm:text-[36px] md:text-[48px] lg:text-[64px] leading-tight tracking-wide font-apex text-center lg:text-left w-full">
+          <p className="text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-tight tracking-wide font-apex w-full text-center lg:text-left">
             TOP SELLER
           </p>
           <a

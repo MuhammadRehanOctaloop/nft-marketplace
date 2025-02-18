@@ -44,11 +44,11 @@ const sellers = [
 
 export default function Section6() {
   return (
-    <div className="m-4 mt-40">
+    <div className="m-10 mt-40">
     <div className="max-w-[1316px] mx-auto">
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between items-center mb-6">
-          <p className="text-[28px] sm:text-[36px] md:text-[48px] lg:text-[64px] leading-tight tracking-wide font-apex text-center lg:text-left w-full">
+          <p className="text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-tight tracking-wide font-apex w-full text-center lg:text-left">
             Top collections
         </p>
         <a
@@ -64,10 +64,10 @@ export default function Section6() {
         {sellers.map((seller, index) => (
           <div
             key={index}
-            className="relative bg-white w-[417px] h-[301px] rounded-xl shadow-lg p-4 flex flex-col"
+            className="relative bg-white w-[417px] h-[301px] rounded-xl shadow-lg p-4 flex flex-col hover:scale-105 transition"
           >
               {/* Image Grid */}
-            <div className="grid mt-1 grid-cols-2 gap-2">
+            <div className="grid mt-1 grid-cols-2 gap-2 ">
               {seller.images.slice(0, 2).map((image, idx) => (
                 <Image
                   key={idx}

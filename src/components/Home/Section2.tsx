@@ -44,14 +44,14 @@ const Section2 = () => {
   };
 
   return (
-    <div className="mx-8 mt-40">
+    <div className="m-10 mt-40">
       <div className="flex w-full max-w-[1391px] my-10 flex-wrap mx-auto">
         <div className="flex flex-col w-full lg:flex-row mb-10 items-center lg:items-end">
           <div className="w-full text-center lg:text-left">
             <p className="text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-tight tracking-[4%] font-[400] font-apex">
               Featured Collection
             </p>
-            <p className="mt-2 text-[14px] sm:text-[16px] md:text-[18px] leading-snug tracking-[3%] font-light font-roboto">
+            <p className="mt-2 text-[14px] sm:text-[16px] md:text-[18px] leading-snug tracking-[3%] text-[#6B6B6B] font-light font-roboto">
               Explore our exclusive featured collection, showcasing innovative
               campaigns and creative
               <br /> storytelling from top brands around the world.
