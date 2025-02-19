@@ -4,16 +4,18 @@ interface AuctionCardProps {
   imageUrl: string;
   timeLeft: string; // Format: HH:MM:SS
   inStock: number;
+  hideStockPriceInfo?: boolean; // New prop to control visibility
 }
 
 const AuctionCard: React.FC<AuctionCardProps> = ({
   imageUrl,
   timeLeft,
   inStock,
+  hideStockPriceInfo = false, // Default value is false
 }) => {
   return (
     <div
-      className="relative w-[308px] h-[411px] rounded-3xl shadow-lg transition group overflow-hidden"
+      className="relative w-[308px] h-[411px] rounded-3xl shadow-lg transition hover:scale-105 group overflow-hidden"
       style={{
         backgroundImage: "url('/card/cardbg.png')",
       }}
@@ -38,6 +40,35 @@ const AuctionCard: React.FC<AuctionCardProps> = ({
           <Image src={imageUrl} alt="NFT Image" width={292} height={314} />
         </div>
 
+        {/* Stock & Price Info (Hidden if hideStockPriceInfo is true) */}
+        {!hideStockPriceInfo && (
+          <div className="absolute flex justify-between bottom-3 w-full object-contain p-3">
+            <div className="flex items-center w-[91.68px] h-[36.07px] bg-white shadow-md px-3 py-1 rounded-lg hover:scale-105 transition">
+              <span className="text-gray-800 font-roboto font-bold text-[12px]">
+                In Stock
+              </span>
+              <span className="ml-3 text-gray-700 font-roboto font-normal text-[12px]">
+                {inStock}
+              </span>
+            </div>
+            <div className="flex mr-2 items-center w-[123.07px] h-[36.07px] bg-white shadow-md px-3 py-1 rounded-lg hover:scale-105 transition">
+              <span className="text-gray-800 font-roboto font-bold text-[12px]">
+                Price:
+              </span>
+              <Image
+                src="/card/crypto.png"
+                alt="Crypto Icon"
+                width={16}
+                height={16}
+                className="ml-2 mr-1"
+              />
+              <span className="text-gray-700 font-roboto font-normal text-[12px]">
+                142.02
+              </span>
+            </div>
+          </div>
+        )}
+
         {/* Timer & Place a Bid Button */}
         <div className="absolute flex flex-col bottom-3 ml-[7px] overflow-hidden justify-center rounded-2xl items-center left-1/2 transform -translate-x-1/2 w-[281px] h-[302px] transition-all duration-500 group bg-transparent group-hover:bg-black group-hover:bg-opacity-50">
           {/* Place a Bid Button */}
@@ -47,33 +78,6 @@ const AuctionCard: React.FC<AuctionCardProps> = ({
           {/* Timer Button */}
           <div className="mb-3 font-bold bg-transparent shadow-md px-3 py-3 items-center justify-center rounded-lg text-center text-[#2B2B2B] w-[143px] h-[44px] tracking-[0.11em] text-[18.91px] leading-[22.16px] font-roboto transition-all duration-1000 group-hover:translate-y-[30px] bg-white bg-opacity-80">
             {timeLeft}
-          </div>
-        </div>
-
-        {/* Stock & Price Info */}
-        <div className="absolute flex justify-between bottom-3 w-full object-contain p-3">
-          <div className="flex items-center w-[91.68px] h-[36.07px] bg-white shadow-md px-3 py-1 rounded-lg hover:scale-105 transition">
-            <span className="text-gray-800 font-roboto font-bold text-[12px]">
-              In Stock
-            </span>
-            <span className="ml-3 text-gray-700 font-roboto font-normal text-[12px]">
-              {inStock}
-            </span>
-          </div>
-          <div className="flex mr-2 items-center w-[123.07px] h-[36.07px] bg-white shadow-md px-3 py-1 rounded-lg hover:scale-105 transition">
-            <span className="text-gray-800 font-roboto font-bold text-[12px]">
-              Price:
-            </span>
-            <Image
-              src="/card/crypto.png"
-              alt="Crypto Icon"
-              width={16}
-              height={16}
-              className="ml-2 mr-1"
-            />
-            <span className="text-gray-700 font-roboto font-normal text-[12px]">
-              142.02
-            </span>
           </div>
         </div>
       </div>
