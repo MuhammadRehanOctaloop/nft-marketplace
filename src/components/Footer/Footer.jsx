@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
+import Link from "next/link";
 import Image from "next/image";
+
 import {
   FaTelegramPlane,
   FaFacebookF,
@@ -106,9 +107,12 @@ const Footer = () => {
               {["About NFT", "Live Auctions", "Collection", "Activity"].map(
                 (item) => (
                   <li key={item}>
-                    <a href="#" className="hover:underline">
+                    <Link
+                      href={item === "Live Auctions" ? "/AuctionPage" : "#"}
+                      className="hover:underline"
+                    >
                       {item}
-                    </a>
+                    </Link>
                   </li>
                 )
               )}
