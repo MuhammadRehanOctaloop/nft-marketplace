@@ -108,7 +108,13 @@ const Footer = () => {
                 (item) => (
                   <li key={item}>
                     <Link
-                      href={item === "Live Auctions" ? "/AuctionPage" : "#"}
+                      href={
+                        item === "Live Auctions"
+                          ? "/AuctionPage"
+                          : item === "Collection"
+                          ? "/TopCollection"
+                          : "#"
+                      }
                       className="hover:underline"
                     >
                       {item}

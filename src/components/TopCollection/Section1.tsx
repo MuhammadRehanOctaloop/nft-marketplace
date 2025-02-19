@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link"
 
 const sellers = [
   {
@@ -52,12 +51,12 @@ export default function Section6() {
           <p className="text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-tight tracking-wide font-apex w-full text-center lg:text-left">
             Top collections
         </p>
-        <Link
-          href="/TopCollection"
+        <a
+          href="#"
             className="text-red-500 w-[300px] hover:underline font-roboto font-medium text-[22px] sm:text-[20px] md:text-[22px] leading-[25.78px] text-center mt-6 lg:mt-0"
         >
           View More Collection
-        </Link>
+        </a>
       </div>
 
       {/* Change grid to flex with wrapping */}
@@ -65,19 +64,17 @@ export default function Section6() {
         {sellers.map((seller, index) => (
           <div
             key={index}
-            className="relative border-[3px] border-[#E7E7E7] bg-white w-[417px] h-[301px] rounded-xl shadow-lg p-2 flex flex-col hover:scale-105 transition"
+            className="relative bg-white w-[417px] h-[301px] rounded-xl shadow-lg p-4 flex flex-col hover:scale-105 transition"
           >
               {/* Image Grid */}
-              <div className="bg-[#E7E7E7] rounded-2xl p-2">
-
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid mt-1 grid-cols-2 gap-2 ">
               {seller.images.slice(0, 2).map((image, idx) => (
                 <Image
-                key={idx}
-                src={image}
-                alt="Artwork"
-                width={181}
-                height={95}
+                  key={idx}
+                  src={image}
+                  alt="Artwork"
+                  width={181}
+                  height={95}
                 />
               ))}
             </div>
@@ -91,7 +88,6 @@ export default function Section6() {
                   height={73}
                 />
               ))}
-            </div>
             </div>
 
             <div className="flex items-center mt-4 space-x-3">
