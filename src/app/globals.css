@@ -21,3 +21,35 @@ body {
 .font-oxanium {
   font-family: 'Oxanium', sans-serif;
 }
+
+.border-gradient {
+  position: relative;
+  border-radius: 12px; /* Match the border-radius of the card */
+  border: 2px solid #E7E7E7; /* Default border color */
+  transition: border 0.3s ease-in-out;
+}
+
+.border-gradient::before {
+  content: "";
+  position: absolute;
+  inset: -2px; /* Expands slightly to create the border effect */
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(90deg, #ff00ff, #ffcc00, #00ff00, #00ffff, #ff00ff);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0; /* Hidden by default */
+}
+
+.border-gradient:hover {
+  border-color: transparent; /* Hide solid border on hover */
+}
+
+.border-gradient:hover::before {
+  opacity: 1; /* Show the gradient border on hover */
+}
+

@@ -1,110 +1,160 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import { BsPatchCheckFill } from "react-icons/bs";
+import Link from "next/link";
+
+const categories = [
+  "Popular",
+  "Trending",
+  "Sports",
+  "Art",
+  "Fantasy",
+  "Photography",
+  "Space",
+];
 
 const sellers = [
   {
     name: "Wonderful ARTWORK",
     img: "/home/section6/icon1.png",
-    images: [
-      "/home/section6/nft_algo_1/1.png",
-      "/home/section6/nft_algo_1/2.png",
-      "/home/section6/nft_algo_1/3.png",
-      "/home/section6/nft_algo_1/4.png",
-      "/home/section6/nft_algo_1/5.png",
-      "/home/section6/nft_algo_1/6.png",
-      "/home/section6/nft_algo_1/7.png",
-    ],
+    images: ["/TopCollection/section1/cardimg/1.png"],
   },
   {
     name: "Wonderful ARTWORK",
     img: "/home/section6/icon2.png",
-    images: [
-      "/home/section6/nft_algo_2/1.png",
-      "/home/section6/nft_algo_2/2.png",
-      "/home/section6/nft_algo_2/3.png",
-      "/home/section6/nft_algo_2/4.png",
-      "/home/section6/nft_algo_2/5.png",
-      "/home/section6/nft_algo_2/6.png",
-      "/home/section6/nft_algo_2/7.png",
-    ],
+    images: ["/TopCollection/section1/cardimg/2.png"],
   },
   {
     name: "Wonderful ARTWORK",
     img: "/home/section6/icon3.png",
-    images: [
-      "/home/section6/nft_algo_3/1.png",
-      "/home/section6/nft_algo_3/2.png",
-      "/home/section6/nft_algo_3/3.png",
-      "/home/section6/nft_algo_3/4.png",
-      "/home/section6/nft_algo_3/5.png",
-      "/home/section6/nft_algo_3/6.png",
-      "/home/section6/nft_algo_3/7.png",
-    ],
+    images: ["/TopCollection/section1/cardimg/3.png"],
+  },
+  {
+    name: "Wonderful ARTWORK",
+    img: "/home/section6/icon3.png",
+    images: ["/TopCollection/section1/cardimg/4.png"],
+  },
+  {
+    name: "Wonderful ARTWORK",
+    img: "/home/section6/icon3.png",
+    images: ["/TopCollection/section1/cardimg/5.png"],
+  },
+  {
+    name: "Wonderful ARTWORK",
+    img: "/home/section6/icon3.png",
+    images: ["/TopCollection/section1/cardimg/6.png"],
+  },
+  {
+    name: "Wonderful ARTWORK",
+    img: "/home/section6/icon3.png",
+    images: ["/TopCollection/section1/cardimg/1.png"],
+  },
+  {
+    name: "Wonderful ARTWORK",
+    img: "/home/section6/icon3.png",
+    images: ["/TopCollection/section1/cardimg/2.png"],
+  },
+  {
+    name: "Wonderful ARTWORK",
+    img: "/home/section6/icon3.png",
+    images: ["/TopCollection/section1/cardimg/5.png"],
+  },
+  {
+    name: "Wonderful ARTWORK",
+    img: "/home/section6/icon3.png",
+    images: ["/TopCollection/section1/cardimg/4.png"],
+  },
+  {
+    name: "Wonderful ARTWORK",
+    img: "/home/section6/icon3.png",
+    images: ["/TopCollection/section1/cardimg/1.png"],
   },
 ];
 
 export default function Section6() {
+  const [activeCategory, setActiveCategory] = useState("Popular");
   return (
     <div className="m-10 mt-40">
-    <div className="max-w-[1316px] mx-auto">
+      <div className="max-w-[1316px] mx-auto">
         {/* Header Section */}
-        <div className="flex flex-col lg:flex-row justify-between items-center mb-6">
-          <p className="text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-tight tracking-wide font-apex w-full text-center lg:text-left">
-            Top collections
-        </p>
-        <a
-          href="#"
-            className="text-red-500 w-[300px] hover:underline font-roboto font-medium text-[22px] sm:text-[20px] md:text-[22px] leading-[25.78px] text-center mt-6 lg:mt-0"
-        >
-          View More Collection
-        </a>
-      </div>
+        <div className="flex flex-col items-center lg:items-start mb-6 gap-10">
+          {/* Title */}
+          <p className="text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-tight tracking-wide font-apex text-center lg:text-left">
+            Explore Collections
+          </p>
 
-      {/* Change grid to flex with wrapping */}
-      <div className="max-w-[1316px] flex flex-wrap justify-center mt-16 gap-6">
-        {sellers.map((seller, index) => (
-          <div
-            key={index}
-            className="relative bg-white w-[417px] h-[301px] rounded-xl shadow-lg p-4 flex flex-col hover:scale-105 transition"
-          >
-              {/* Image Grid */}
-            <div className="grid mt-1 grid-cols-2 gap-2 ">
-              {seller.images.slice(0, 2).map((image, idx) => (
-                <Image
-                  key={idx}
-                  src={image}
-                  alt="Artwork"
-                  width={181}
-                  height={95}
-                />
-              ))}
-            </div>
-            <div className="grid grid-cols-4 gap-2 mt-2">
-              {seller.images.slice(2, 6).map((image, idx) => (
-                <Image
-                  key={idx}
-                  src={image}
-                  alt="Artwork"
-                  width={83}
-                  height={73}
-                />
-              ))}
-            </div>
+          {/* Categories List */}
+          <div className="flex flex-wrap justify-center lg:justify-start gap-6 text-lg font-medium text-gray-700">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-4 py-2 h-[49] rounded-md transition-all duration-300 ${
+                  activeCategory === category
+                    ? "border border-red-500 text-red-500"
+                    : "hover:text-red-500"
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
 
-            <div className="flex items-center mt-4 space-x-3">
-              <Image src={seller.img} alt={seller.name} width={64} height={64} />
-              <div>
+        {/* Change grid to flex with wrapping */}
+        <div className="max-w-[1316px] flex flex-wrap justify-center gap-6">
+          {sellers.map((seller, index) => (
+            <div
+              key={index}
+              className="relative bg-white w-[417px] h-[276px] rounded-xl shadow-lg p-2 flex flex-col hover:scale-105 transition-all duration-300 border-gradient"
+            >
+              <div className="flex items-center h-[65.19] mb-2 space-x-3">
+                <Image
+                  src={seller.img}
+                  alt={seller.name}
+                  width={65.19}
+                  height={65.19}
+                />
+                <div>
                   <p className="font-roboto font-bold text-[18px] leading-[21.09px] tracking-[0.5%]">
                     {seller.name}
                   </p>
-                  <p className="font-roboto font-normal text-[14px] leading-[16.41px] tracking-[0.09em] text-gray-500">
-                  Created by Jacob Jones
+                  <p className="font-roboto font-normal text-[14px] leading-[16.41px] tracking-[0.09em] text-gray-500 flex items-center gap-1">
+                    <span>
+                      Created by <b>Jacob Jones </b>
+                    </span>
+                    <BsPatchCheckFill className="text-[#785EF0] w-4 h-4" />
                   </p>
+                </div>
               </div>
+
+              {/* Image Section */}
+              <div className="mx-auto mt-1 flex justify-center items-center">
+                {seller.images.slice(0).map((image, idx) => (
+                  <Image
+                    key={idx}
+                    src={image}
+                    alt="Artwork"
+                    width={397}
+                    height={178}
+                  />
+                ))}
+              </div>
+
+              {/* Button at Bottom */}
+              <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2">
+      <Link href="/Collection">
+        <button className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg shadow-md">
+          Items <span className="font-bold">1.5k</span>
+        </button>
+      </Link>
+    </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
-  </div>
   );
 }
