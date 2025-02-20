@@ -3,7 +3,7 @@ import { BsTwitter, BsDiscord } from "react-icons/bs";
 import { IoGlobeOutline } from "react-icons/io5";
 import { BiGlasses } from "react-icons/bi";
 
-const HeroSection = () => {
+const Hero = () => {
   return (
     <div className="mt-40 m-10">
       <div className="relative flex flex-col lg:flex-row items-center justify-between max-w-[1320px] mx-auto w-full gap-10">
@@ -22,25 +22,25 @@ const HeroSection = () => {
         {/* Right Text Section */}
         <div className="flex flex-col justify-center w-full max-w-[674px] lg:w-[674px] mx-4">
           {/* Title */}
-          <h1 className="text-[#2B2B2B] font-Apex_Mk2 font-normal text-[48px] sm:text-[36px] md:text-[64px] lg:text-[64px] leading-tight tracking-[0.04em] text-center md:text-left lg:text-left">
+          <h1 className="text-[#2B2B2B] font-apex font-normal text-[48px] md:text-[64px] lg:text-[64px] leading-tight tracking-[0.04em] text-center md:text-left lg:text-left">
             PIXACIO
           </h1>
 
           {/* Stats Section */}
           <div className="flex flex-wrap gap-4 mt-6 justify-center md:justify-start lg:justify-start">
-            <div className="bg-white px-6 py-3 w-full sm:w-[280px] md:w-[320px] h-auto rounded-lg shadow-md text-[14px] text-[#808080] font-Roboto flex items-center justify-between border border-gray-300">
+            <div className="bg-white px-6 py-3 w-full sm:w-[280px] md:w-[320px] h-auto rounded-lg shadow-md text-[14px] text-[#808080] font-roboto flex items-center justify-between border border-gray-300">
               <span>Items listed</span>
               <span className="font-bold text-[#808080]">3,027</span>
             </div>
 
-            <div className="bg-white px-6 py-3 w-full sm:w-[280px] md:w-[320px] h-auto rounded-lg shadow-md text-[14px] text-[#808080] font-Roboto flex items-center justify-between border border-gray-300">
+            <div className="bg-white px-6 py-3 w-full sm:w-[280px] md:w-[320px] h-auto rounded-lg shadow-md text-[14px] text-[#808080] font-roboto flex items-center justify-between border border-gray-300">
               <span>Num of Sold Items</span>
               <span className="font-bold text-[#808080]">120</span>
             </div>
           </div>
 
           <div className="flex flex-wrap gap-4 justify-center md:justify-start lg:justify-start">
-            <div className="bg-white px-6 py-3 mt-6 w-full sm:w-[280px] md:w-[320px] h-auto rounded-lg shadow-md text-[14px] text-[#808080] font-Roboto flex items-center justify-between border border-gray-300">
+            <div className="bg-white px-6 py-3 mt-6 w-full sm:w-[280px] md:w-[320px] h-auto rounded-lg shadow-md text-[14px] text-[#808080] font-roboto flex items-center justify-between border border-gray-300">
               <span>Vol FRY</span>
               <span className="font-bold text-[#808080]">18.5 FRY</span>
             </div>
@@ -75,12 +75,8 @@ const HeroSection = () => {
           </div>
 
           {/* Description */}
-          <p className="text-gray-600 text-sm sm:text-xs md:text-sm mt-6 leading-relaxed text-center md:text-left lg:text-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-            euismod vulputate ipsum, non molestie magna facilisis a. Cras
-            tincidunt sem sed lorem dapibus laoreet. Curabitur vel lectus purus.
-            In gravida eros ac aliquam facilisis. Suspendisse at elementum
-            metus.
+          <p className="text-gray-600 text-sm sm:text-xs md:text-sm mt-6 leading-relaxed text-center md:text-left lg:text-left font-roboto">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod vulputate ipsum, non molestie magna facilisis a. Cras tincidunt sem sed lorem dapibus laoreet. Curabitur vel lectus purus. In gravida eros ac aliquam facilisis. Suspendisse at elementum metus. Proin elementum maximus placerat. Suspendisse sapien justo, interdum sit amet sollicitudin quis, porttitor a metus. In eu accumsan dolor, eu venenatis eros. Aliquam erat volutpat. Etiam suscipit placerat mi. Mauris diam purus, sagittis eu feugiat eu, sodales a quam. Cras elit enim. 
           </p>
         </div>
       </div>
@@ -88,4 +84,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Hero;
