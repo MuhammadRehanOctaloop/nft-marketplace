@@ -51,22 +51,22 @@ const Hero = () => {
 
           {/* Social Icons */}
           <div className="flex gap-4 flex-wrap justify-center md:justify-start lg:justify-start">
-            <button className="bg-white px-3 py-2 rounded shadow-md flex items-center gap-2 border border-gray-300">
+            <button className="bg-white px-3 py-2 rounded-lg shadow-md flex items-center gap-2 border border-gray-300 hover:scale-105 transition">
               <IoGlobeOutline className="text-black w-5 h-5" />
             </button>
-            <button className="bg-white px-3 py-2 rounded shadow-md flex items-center gap-2 border border-gray-300">
+            <button className="bg-white px-3 py-2 rounded-lg shadow-md flex items-center gap-2 border border-gray-300 hover:scale-105 transition">
               <BsTwitter className="text-black w-5 h-5" />
               <span className="bg-[#FFCCCC] px-2 py-1 text-[10px] font-bold rounded">
                 12.3k
               </span>
             </button>
-            <button className="bg-white px-3 py-2 rounded shadow-md flex items-center gap-2 border border-gray-300">
+            <button className="bg-white px-3 py-2 rounded-lg shadow-md flex items-center gap-2 border border-gray-300 hover:scale-105 transition">
               <BsDiscord className="text-black w-5 h-5" />
               <span className="bg-[#FFCCCC] px-2 py-1 text-[10px] font-bold rounded">
                 12.3k
               </span>
             </button>
-            <button className="bg-white px-3 py-2 rounded shadow-md flex items-center gap-2 border border-gray-300">
+            <button className="bg-white px-3 py-2 rounded-lg shadow-md flex items-center gap-2 border border-gray-300 hover:scale-105 transition">
               <BiGlasses className="text-black w-5 h-5" />
               <span className="bg-[#FFCCCC] px-2 py-1 text-[10px] font-bold rounded">
                 12.3k
