@@ -1,20 +1,16 @@
 "use client";
 
-import AuctionCard from "@/components/AuctionCard";
+import Card from "@/components/Card";
 
 const cards = [
-  { id: 6, imageUrl: "/auction/card/6.png" },
-  { id: 4, imageUrl: "/auction/card/4.png" },
-  { id: 1, imageUrl: "/auction/card/1.png" },
-  { id: 7, imageUrl: "/auction/card/7.png" },
-  { id: 2, imageUrl: "/auction/card/2.png" },
-  { id: 3, imageUrl: "/auction/card/3.png" },
-  { id: 5, imageUrl: "/auction/card/5.png" },
-  { id: 8, imageUrl: "/auction/card/8.png" },
-  { id: 9, imageUrl: "/auction/card/2.png" },
-  { id: 10, imageUrl: "/auction/card/4.png" },
-  { id: 11, imageUrl: "/auction/card/6.png" },
-  { id: 12, imageUrl: "/auction/card/8.png" },
+  { id: 1, imageUrl: "/NFTDetail/section2/1.png" },
+  { id: 2, imageUrl: "/NFTDetail/section2/2.png" },
+  { id: 3, imageUrl: "/NFTDetail/section2/3.png" },
+  { id: 4, imageUrl: "/NFTDetail/section2/4.png" },
+  { id: 5, imageUrl: "/NFTDetail/section2/5.png" },
+  { id: 6, imageUrl: "/NFTDetail/section2/6.png" },
+  { id: 7, imageUrl: "/NFTDetail/section2/7.png" },
+  { id: 8, imageUrl: "/NFTDetail/section2/8.png" },
 ];
 
 const Section2 = () => {
@@ -35,11 +31,7 @@ const Section2 = () => {
             key={card.id}
             className="flex justify-center w-full sm:w-[300px]"
           >
-            <AuctionCard
-              imageUrl={card.imageUrl}
-              timeLeft={"3:06:59:18"}
-              inStock={7}
-            />
+            <Card imageUrl={card.imageUrl} />
           </div>
         ))}
       </div>

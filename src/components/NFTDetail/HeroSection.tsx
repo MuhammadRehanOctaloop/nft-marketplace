@@ -287,7 +287,7 @@ const Hero = () => {
             {/* Dropdown Content */}
             {openSections[2] && (
               <div>
-                <div className="grid grid-cols-2 mt-2 items-center text-[14px]  text-[#808080] font-medium px-6 p-2">
+                <div className="grid grid-cols-2 mt-3 items-center text-[14px]  text-[#808080] font-medium px-6 p-2">
                   <span>Contract Address</span>
                   <span className="text-right">0x5848...1713</span>
                 </div>
