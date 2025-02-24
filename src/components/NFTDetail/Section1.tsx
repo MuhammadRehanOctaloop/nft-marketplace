@@ -38,27 +38,22 @@ const Section1 = () => {
         {/* Divider */}
         <div className="h-[2px] bg-[#E7E7E7] w-full"></div>
 
-{/* Filter Bar */}
-{openSections[0] && (
-  <div className="p-4 flex-wrap  flex w-full justify-center">
-      <select 
-        className="w-full flex-wrap p-3 border-2 border-[#E7E7E7] rounded-lg text-black cursor-not-allowed"
-        value={filter}
-        onChange={(e) => setFilter(e.target.value)}
-        disabled
-      >  
-        <option value="">Filter</option>
-        <option value="list">List</option>
-        <option value="sale">Sale</option>
-        <option value="transfer">Transfer</option>
-      </select>
-  </div>
-)}
-
-
-
-
-
+        {/* Filter Bar */}
+        {openSections[0] && (
+          <div className="p-4 flex-wrap  flex w-full justify-center">
+            <select
+              className="w-full flex-wrap p-3 border-2 border-[#E7E7E7] rounded-lg text-black cursor-not-allowed"
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+              disabled
+            >
+              <option value="">Filter</option>
+              <option value="list">List</option>
+              <option value="sale">Sale</option>
+              <option value="transfer">Transfer</option>
+            </select>
+          </div>
+        )}
 
         {/* Dropdown Content */}
         {openSections[0] && (
@@ -78,7 +73,7 @@ const Section1 = () => {
               <span></span>
               <span>1 days</span>
             </div>
-            
+
             <div className="grid grid-cols-5 items-center text-[14px] border-b text-[#808080] font-medium px-5 p-3">
               <span>List</span>
               <span className="font-bold text-black"></span>

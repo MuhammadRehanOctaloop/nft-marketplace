@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const sellers = [
   { name: "Jacob Jones", img: "/home/section4/1.png" },
@@ -19,12 +20,13 @@ export default function Section4() {
           <p className="text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-tight tracking-wide font-apex w-full text-center lg:text-left">
             TOP SELLER
           </p>
-          <a
-            href="#"
+          <Link href="/TopSellers">
+          <p
             className="text-red-500 w-[180px] hover:underline font-roboto font-medium text-[22px] sm:text-[20px] md:text-[22px] leading-[25.78px] text-center mt-6 lg:mt-0"
           >
             View All
-          </a>
+          </p>
+          </Link>
         </div>
 
         {/* Changed grid to flex with wrapping */}

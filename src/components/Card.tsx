@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface CardProps {
   imageUrl: string;
@@ -39,9 +40,11 @@ const Card: React.FC<CardProps> = ({ imageUrl, isSold }) => {
         {/* Button s */}
         <div className="absolute flex gap-20 bottom-3 w-full object-contain p-3">
           {/* Buy Button */}
+          <Link href="/NFTDetail">
           <button className="px-4 py-2 text-white w-[56px] h-[36] font-semibold bg-gradient-to-tl from-[#FD0000] via-[#FD3B3B] to-[#FF9292] rounded-lg shadow-lg hover:scale-105 transition">
             Buy
           </button>
+          </Link>
 
           {/* Price Button */}
           <div className="flex items-center w-[123.07px] h-[36.07px] bg-white shadow-md px-3 py-1 rounded-lg hover:scale-105 transition">
