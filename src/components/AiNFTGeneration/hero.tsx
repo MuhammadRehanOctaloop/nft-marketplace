@@ -26,7 +26,7 @@ export default function Hero() {
 
           {/* Bottom Text */}
           <p
-            className="absolute bottom-0 text-gray-500 font-roboto font-normal text-[10 px] leading-[14px] sm:text-[10px] md:text-[15px] lg:text-[16px] xlg:text-[18px]"
+            className="absolute bottom-0 text-gray-500 font-roboto font-normal text-[10px] leading-[14px] sm:text-[10px] md:text-[15px] lg:text-[16px] xlg:text-[18px]"
           >
             Get Onboard And Earn Money Like A Pro
           </p>
