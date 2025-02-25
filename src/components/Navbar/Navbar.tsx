@@ -29,9 +29,11 @@ const Navbar: React.FC = () => {
               HOME
             </Link>
           </li>
+          <Link href="/AiNFTGeneration" className="block w-full h-full">
           <li className="text-black font-normal text-[16px] md:text-[18px]">
             AI NFT GENERATION
           </li>
+          </Link>
         </ul>
 
         {/* Mobile Menu Button (Hidden on Desktop) */}
