@@ -1,4 +1,5 @@
 import { FaRegCopy } from "react-icons/fa";
+import Image from "next/image";
 
 const prompts = [
   {
@@ -68,21 +69,28 @@ export default function Section2() {
           {prompts.map((prompt, index) => (
             <div
               key={index}
-              className="relative flex flex-col sm:flex-row w-full max-w-[577px] rounded-lg overflow-hidden hover:shadow-lg transition"
+              className="relative flex flex-col sm:flex-row w-full max-w-[577px] rounded-3xl overflow-hidden bg-white border hover:shadow-lg transition"
             >
               {/* Image Container */}
               <div className="relative w-full sm:w-[310px] object-cover p-4 mx-auto">
-                <img
+                <Image
+                  width={310}
+                  height={232}
                   src={prompt.image}
                   alt={prompt.title}
                   className="rounded-lg w-full sm:w-[310px] h-auto"
                 />
 
                 {/* Copy Button - Hidden on Small Screens, Visible on sm+ */}
-                <button className="absolute top-1/2 right-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:right-[-2.5rem] w-[58px] h-[58px] border-2 border-white bg-gradient-to-tl from-[#FD0000] via-[#FD3B3B] to-[#FF9292] text-white rounded-full p-2 text-[12px] hover:bg-red-600 transition items-center justify-center gap-1 hidden sm:flex">
+                <button className="absolute top-1/2 right-[-2.5rem] transform -translate-x-1/2 -translate-y-1/2 w-[58px] h-[58px] border-2 border-white bg-gradient-to-tl from-[#FD0000] via-[#FD3B3B] to-[#FF9292] text-white rounded-full p-1 text-[12px] hover:bg-red-600 transition items-center justify-center gap-1  hidden sm:flex">
                   <span>Copy</span>
-                  <FaRegCopy size={28} />
+                  <FaRegCopy size={18} />
                 </button>
+                {/* Copy Button - Visible Only on Small Screens */}
+              <button className="absolute flex left-1/2 bottom-[-2.5rem] transform -translate-x-1/2 -translate-y-1/2 sm:hidden w-[58px] h-[58px] border-2 border-white bg-gradient-to-tl from-[#FD0000] via-[#FD3B3B] to-[#FF9292] text-white rounded-full p-1 text-[12px] hover:bg-red-600 transition items-center justify-center gap-1">
+                <span>Copy</span>
+                <FaRegCopy size={18} />
+              </button>
               </div>
 
               {/* Text Content - Ensures Flex Behavior */}
@@ -95,12 +103,6 @@ export default function Section2() {
                   {prompt.description}
                 </p>
               </div>
-
-              {/* Copy Button - Visible Only on Small Screens */}
-              <button className="absolute top-2/4 right-1/3 transform -translate-x-1/2 -translate-y-1/2 flex sm:hidden w-[58px] h-[58px] border-2 border-white bg-gradient-to-tl from-[#FD0000] via-[#FD3B3B] to-[#FF9292] text-white rounded-full p-2 text-[12px] hover:bg-red-600 transition items-center justify-center gap-1">
-                <span>Copy</span>
-                <FaRegCopy size={28} />
-              </button>
             </div>
           ))}
         </div>

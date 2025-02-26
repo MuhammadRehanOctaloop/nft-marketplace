@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar/Navbar";
-import Hero from "@/components/CreateNFT/Hero";
+import Hero from "@/components/CreateCollection/Hero";
 
-export default function CreateNFT() {
+export default function CreateCollection() {
     return (
       <div>
       <Navbar />

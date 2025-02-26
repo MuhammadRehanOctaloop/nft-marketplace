@@ -9,6 +9,12 @@ const nfts = [
   { id: 2, image: "/CreateNFT/2.png" },
   { id: 3, image: "/CreateNFT/3.png" },
   { id: 4, image: "/CreateNFT/2.png" },
+  { id: 5, image: "/CreateNFT/1.png" },
+  { id: 6, image: "/CreateNFT/2.png" },
+  { id: 7, image: "/CreateNFT/3.png" },
+  { id: 8, image: "/CreateNFT/2.png" },
+  { id: 9, image: "/CreateNFT/1.png" },
+  { id: 10, image: "/CreateNFT/2.png" },
 ];
 
 export default function NFTSelection() {
@@ -35,9 +41,9 @@ export default function NFTSelection() {
           {/* Left Side Buttons */}
           <div className="flex items-center w-full gap-5 lg:gap-10 text-[#808080] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[22px]">
             <button className="px-4 py-2 w-full max-w-[172px] h-[58px] rounded-lg border hover:bg-gray-100 transition">
-              Single NFT
+              Collection
             </button>
-            <p>4/4 Generated</p>
+            <p>10/10 Generated</p>
           </div>
           {/* Right Side Button - Aligned to End */}
           <div className="flex w-full items-center gap-2 ml-auto justify-end">

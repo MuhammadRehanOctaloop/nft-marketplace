@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { GoPlus } from "react-icons/go";
 
@@ -8,18 +9,30 @@ export default function NFTInputBars() {
   const [supply, setSupply] = useState(10);
   const [selected, setSelected] = useState("Single NFT");
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+
+  const handleGenerate = () => {
+    if (selected === "Single NFT") {
+      router.push("/CreateNFT");
+    } else {
+      router.push("/CreateCollection");
+    }
+  };
 
   return (
     <div className="mx-10 mt-16">
       <div className="flex flex-col w-full max-w-[1320px] items-center gap-6 mx-auto">
         {/* First Bar */}
-        <div className="flex items-center w-full h-full max-w-[1002px] max-h-[70px] rounded-lg overflow-hidden">
+        <div className="flex items-center w-full h-[70px] border bg-white max-w-[1002px] rounded-2xl">
           <input
             type="text"
             placeholder="Fantasy Creature holding a sword..."
-            className="flex-grow px-4 py-3 text-gray-700 outline-none"
+            className="flex-grow px-4 py-3 text-gray-700 outline-none h-full rounded-2xl"
           />
-          <button className="w-[100px] sm:w-[110px] md:w-[119px] h-[40px] sm:h-[45px] md:h-[50px] bg-[#FE0101] text-white font-roboto font-bold text-[14px] sm:text-[17px] md:text-[18px] leading-[21.09px] text-center rounded-2xl hover:bg-[#E00000]">
+          <button
+            onClick={handleGenerate}
+            className="w-[100px] h-[50px] mr-2 bg-[#FE0101] text-white font-roboto font-bold text-[14px] sm:text-[17px] md:text-[18px] leading-[21.09px] text-center rounded-xl hover:bg-[#E00000]"
+          >
             Generate
           </button>
         </div>
@@ -30,7 +43,7 @@ export default function NFTInputBars() {
           <div className="relative w-[234px] h-[58px]">
             <button
               onClick={() => setOpen(!open)}
-              className="w-full max-w-[201px] h-full flex items-center justify-between rounded-lg bg-white px-4"
+              className="w-full max-w-[201px] h-full border flex items-center justify-between rounded-2xl bg-white px-4"
             >
               {selected} <FaChevronDown className="text-black" size={18} />
             </button>
@@ -61,34 +74,34 @@ export default function NFTInputBars() {
           </div>
 
           {/* Supply Input (216px) */}
-          <div className="flex items-center w-[216px] h-[58px] rounded-lg px-4">
+          <div className="flex items-center w-[216px] h-[58px] px-4">
             <span>Supply</span>
-            <div className="relative flex items-center ml-3">
+            <div className="relative flex bg-white border p-1 rounded-2xl items-center ml-3">
               <input
                 type="number"
                 value={supply}
                 onChange={(e) => setSupply(Number(e.target.value))}
-                className="w-16 h-[38px] text-center outline-none bg-white  rounded-md"
+                className="w-16 h-[38px] text-center outline-none bg-white rounded-md"
               />
-            <div className="flex flex-col ml-3 gap-2">
-            <button
-              onClick={() => setSupply(supply + 1)}
-              className="w-6 h-1/2 flex items-center justify-center bg-white hover:bg-gray-100"
-            >
-              <FaChevronUp className="text-black" size={18} />
-            </button>
-            <button
-              onClick={() => setSupply(supply - 1)}
-              className="w-6 h-1/2 flex items-center justify-center bg-white hover:bg-gray-100"
-            >
-              <FaChevronDown className="text-black" size={18} />
-            </button>
-          </div>
+              <div className="flex flex-col mx-3 gap-2">
+                <button
+                  onClick={() => setSupply(supply + 1)}
+                  className="w-6 h-1/2 flex items-center justify-center bg-white hover:bg-gray-100"
+                >
+                  <FaChevronUp className="text-black" size={18} />
+                </button>
+                <button
+                  onClick={() => setSupply(supply - 1)}
+                  className="w-6 h-1/2 flex items-center justify-center bg-white hover:bg-gray-100"
+                >
+                  <FaChevronDown className="text-black" size={18} />
+                </button>
+              </div>
             </div>
           </div>
 
           {/* Add Styles Button (198px) */}
-          <button className="w-[198px] h-[58px] rounded-lg bg-white flex items-center justify-center gap-4">
+          <button className="w-[198px] h-[58px] rounded-2xl border bg-white flex items-center justify-center gap-4">
             Add Styles
             <GoPlus className="text-black" size={28} />
           </button>
