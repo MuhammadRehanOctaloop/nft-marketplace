@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { FaRegCircleCheck } from "react-icons/fa6";
+import Link from "next/link";
 
 const nfts = [
   { id: 1, image: "/CreateNFT/1.png" },
@@ -44,11 +45,13 @@ export default function NFTSelection() {
             <p className="text-gray-500 text-[16px] hidden sm:block">
               Select an NFT to mint
             </p>
+            <Link href="/MintNFT">
             <button
               className="px-4 py-2 rounded-lg w-full max-w-[96px] h-[37px] text-[12px] text-white font-medium transition bg-gradient-to-tl from-[#FD0000] via-[#FD3B3B] to-[#FF9292]"
             >
               Mint NFT
             </button>
+            </Link>
           </div>
         </div>
 
