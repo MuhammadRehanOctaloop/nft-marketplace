@@ -6,43 +6,43 @@ import { BsCaretDown } from "react-icons/bs";
 const sellers = [
   {
     name: "Wonderful ARTWORK",
-    images: ["/SellerCollections/section1/1.png"],
+    images: ["/SellerCollections/Section1/1.png"],
   },
   {
     name: "Wonderful ARTWORK",
-    images: ["/SellerCollections/section1/2.png"],
+    images: ["/SellerCollections/Section1/2.png"],
   },
   {
     name: "Wonderful ARTWORK",
-    images: ["/SellerCollections/section1/3.png"],
+    images: ["/SellerCollections/Section1/3.png"],
   },
   {
     name: "Wonderful ARTWORK",
-    images: ["/SellerCollections/section1/4.png"],
+    images: ["/SellerCollections/Section1/4.png"],
   },
   {
     name: "Wonderful ARTWORK",
-    images: ["/SellerCollections/section1/5.png"],
+    images: ["/SellerCollections/Section1/5.png"],
   },
   {
     name: "Wonderful ARTWORK",
-    images: ["/SellerCollections/section1/6.png"],
+    images: ["/SellerCollections/Section1/6.png"],
   },
   {
     name: "Wonderful ARTWORK",
-    images: ["/SellerCollections/section1/7.png"],
+    images: ["/SellerCollections/Section1/7.png"],
   },
   {
     name: "Wonderful ARTWORK",
-    images: ["/SellerCollections/section1/8.png"],
+    images: ["/SellerCollections/Section1/8.png"],
   },
   {
     name: "Wonderful ARTWORK",
-    images: ["/SellerCollections/section1/9.png"],
+    images: ["/SellerCollections/Section1/9.png"],
   },
   {
     name: "Wonderful ARTWORK",
-    images: ["/SellerCollections/section1/10.png"],
+    images: ["/SellerCollections/Section1/10.png"],
   },
 ];
 
