@@ -5,13 +5,14 @@ import { MdOutlineDoorBack } from "react-icons/md";
 import { useState } from "react";
 import { IoMdAdd, IoMdClose } from "react-icons/io";
 import { FaRegEdit } from "react-icons/fa";
+import Link from 'next/link';
 
 const Hero = () => {
   const [traits, setTraits] = useState(["blue : fox"]);
   const [royalties, setRoyalties] = useState(false);
 
   return (
-    <div className="mt-40 m-10 mb-5">
+    <div className="mt-40 m-10 mb-32">
       <div className="flex flex-col lg:flex-row justify-center max-w-[1320px] mx-auto gap-5">
         {/* Left Image Section */}
         <div className="relative w-full max-w-[256px] sm:w-[80%] md:w-[60%] justify-center mx-auto">
@@ -95,9 +96,11 @@ const Hero = () => {
                 <label className="block text-[#2B2B2B] text-[20px] font-medium">
                   Choose Collection
                 </label>
+                <Link href="/ChooseCollection">
                 <span className="text-[#808080] text-[16px] font-normal cursor-pointer underline">
                 Choose From Existed
                 </span>
+                </Link>
               </div>
               <label className="block mt-2 text-[#808080] text-[16px] font-normal">
                 (This is the collection where your item will appear)

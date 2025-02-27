@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar/Navbar";
-import Hero from "@/components/MintNFT/Hero";
+import Hero from "@/components/ChooseCollection/Hero";
 
-export default function MintNFT() {
+export default function ChooseCollection() {
     return (
       <div>
       <Navbar />
