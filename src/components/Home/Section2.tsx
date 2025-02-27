@@ -6,15 +6,15 @@ import Card from "@/components/Card";
 import Image from "next/image";
 
 const cards = [
-  { id: 1, imageUrl: "/home/Section2/cardImages/1.png" },
-  { id: 2, imageUrl: "/home/Section2/cardImages/2.png" },
-  { id: 3, imageUrl: "/home/Section2/cardImages/3.png" },
-  { id: 4, imageUrl: "/home/Section2/cardImages/4.png" },
-  { id: 5, imageUrl: "/home/Section2/cardImages/1.png" },
-  { id: 6, imageUrl: "/home/Section2/cardImages/2.png" },
-  { id: 7, imageUrl: "/home/Section2/cardImages/3.png" },
-  { id: 8, imageUrl: "/home/Section2/cardImages/4.png" },
-  { id: 9, imageUrl: "/home/Section2/cardImages/1.png" },
+  { id: 1, imageUrl: "/home/section2/cardImages/1.png" },
+  { id: 2, imageUrl: "/home/section2/cardImages/2.png" },
+  { id: 3, imageUrl: "/home/section2/cardImages/3.png" },
+  { id: 4, imageUrl: "/home/section2/cardImages/4.png" },
+  { id: 5, imageUrl: "/home/section2/cardImages/1.png" },
+  { id: 6, imageUrl: "/home/section2/cardImages/2.png" },
+  { id: 7, imageUrl: "/home/section2/cardImages/3.png" },
+  { id: 8, imageUrl: "/home/section2/cardImages/4.png" },
+  { id: 9, imageUrl: "/home/section2/cardImages/1.png" },
 ];
 
 const Section2 = () => {

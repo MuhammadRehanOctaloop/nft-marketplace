@@ -5,7 +5,7 @@ import { MdOutlineDoorBack } from "react-icons/md";
 import { useState } from "react";
 import { IoMdAdd, IoMdClose } from "react-icons/io";
 import { FaRegEdit } from "react-icons/fa";
-import Link from 'next/link';
+import Link from "next/link";
 
 const Hero = () => {
   const [traits, setTraits] = useState(["blue : fox"]);
@@ -97,9 +97,9 @@ const Hero = () => {
                   Choose Collection
                 </label>
                 <Link href="/ChooseCollection">
-                <span className="text-[#808080] text-[16px] font-normal cursor-pointer underline">
-                Choose From Existed
-                </span>
+                  <span className="text-[#808080] text-[16px] font-normal cursor-pointer underline">
+                    Choose From Existed
+                  </span>
                 </Link>
               </div>
               <label className="block mt-2 text-[#808080] text-[16px] font-normal">
@@ -107,18 +107,21 @@ const Hero = () => {
               </label>
 
               <div className="flex flex-col sm:flex-row justify-between gap-2 mt-2">
-                <Link href="/CreateNFTCollection" className="w-full max-w-[396] h-[91]">
-                <button className="flex w-full max-w-[396] h-[91] items-center gap-4 px-4 py-3 border border-gray-300 rounded-xl text-sm outline-none">
-                  <div className="w-[61px] h-[61px] flex items-center justify-center bg-[#E7E7E7] rounded-lg">
-                    <IoMdAdd className="text-gray-600 text-xl" />
-                  </div>
-                  <p className="block text-left text-[#2B2B2B] text-[18px] font-medium">
-                    Create new collection
-                    <span className="block mt-2 text-[#808080] text-[14px] font-normal">
-                      Type to create
-                    </span>
-                  </p>
-                </button>
+                <Link
+                  href="/CreateNFTCollection"
+                  className="w-full max-w-[396] h-[91]"
+                >
+                  <button className="flex w-full max-w-[396] h-[91] items-center gap-4 px-4 py-3 border border-gray-300 rounded-xl text-sm outline-none">
+                    <div className="w-[61px] h-[61px] flex items-center justify-center bg-[#E7E7E7] rounded-lg">
+                      <IoMdAdd className="text-gray-600 text-xl" />
+                    </div>
+                    <p className="block text-left text-[#2B2B2B] text-[18px] font-medium">
+                      Create new collection
+                      <span className="block mt-2 text-[#808080] text-[14px] font-normal">
+                        Type to create
+                      </span>
+                    </p>
+                  </button>
                 </Link>
                 <button className="flex items-center gap-4 px-4 py-3 border border-gray-300 rounded-xl w-full max-w-[396] h-[91] text-sm outline-none">
                   <div className="w-[61px] h-[61px] flex items-center justify-center bg-[#E7E7E7] rounded-lg">
@@ -200,9 +203,11 @@ const Hero = () => {
 
             {/* Mint Button */}
             <div className="w-full flex justify-end mt-6">
-              <button className="w-full max-w-[139px] h-[53px] px-4 py-3 text-[18px] text-white font-medium rounded-xl bg-gradient-to-tl from-[#FD0000] via-[#FD3B3B] to-[#FF9292] shadow-lg">
-                Mint NFT
-              </button>
+              <Link href="/ArtistProfile">
+                <button className="w-full max-w-[139px] h-[53px] px-4 py-3 text-[18px] text-white font-medium rounded-xl bg-gradient-to-tl from-[#FD0000] via-[#FD3B3B] to-[#FF9292] shadow-lg">
+                  Mint NFT
+                </button>
+              </Link>
             </div>
           </div>
         </div>

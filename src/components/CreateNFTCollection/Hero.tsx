@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { MdOutlineDoorBack } from "react-icons/md";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -81,9 +82,11 @@ const Hero = () => {
 
             {/* Continue Button */}
             <div className="w-full flex justify-end mt-6">
-              <button className="w-full max-w-[139px] h-[53px] px-4 py-3 text-[18px] text-white font-medium rounded-xl bg-gradient-to-tl from-[#FD0000] via-[#FD3B3B] to-[#FF9292] shadow-lg">
-                Continue
-              </button>
+              <Link href="/ArtistProfile">
+                <button className="w-full max-w-[139px] h-[53px] px-4 py-3 text-[18px] text-white font-medium rounded-xl bg-gradient-to-tl from-[#FD0000] via-[#FD3B3B] to-[#FF9292] shadow-lg">
+                  Continue
+                </button>
+              </Link>
             </div>
           </div>
         </div>
