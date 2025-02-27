@@ -12,7 +12,7 @@ const Hero = () => {
   const [royalties, setRoyalties] = useState(false);
 
   return (
-    <div className="mt-40 m-10 mb-32">
+    <div className="mt-40 m-10no">
       <div className="flex flex-col lg:flex-row justify-center max-w-[1320px] mx-auto gap-5">
         {/* Left Image Section */}
         <div className="relative w-full max-w-[256px] sm:w-[80%] md:w-[60%] justify-center mx-auto">
@@ -107,7 +107,8 @@ const Hero = () => {
               </label>
 
               <div className="flex flex-col sm:flex-row justify-between gap-2 mt-2">
-                <button className="flex items-center gap-4 px-4 py-3 border border-gray-300 rounded-xl w-full max-w-[396] h-[91] text-sm outline-none">
+                <Link href="/CreateNFTCollection" className="w-full max-w-[396] h-[91]">
+                <button className="flex w-full max-w-[396] h-[91] items-center gap-4 px-4 py-3 border border-gray-300 rounded-xl text-sm outline-none">
                   <div className="w-[61px] h-[61px] flex items-center justify-center bg-[#E7E7E7] rounded-lg">
                     <IoMdAdd className="text-gray-600 text-xl" />
                   </div>
@@ -118,6 +119,7 @@ const Hero = () => {
                     </span>
                   </p>
                 </button>
+                </Link>
                 <button className="flex items-center gap-4 px-4 py-3 border border-gray-300 rounded-xl w-full max-w-[396] h-[91] text-sm outline-none">
                   <div className="w-[61px] h-[61px] flex items-center justify-center bg-[#E7E7E7] rounded-lg">
                     <Image
