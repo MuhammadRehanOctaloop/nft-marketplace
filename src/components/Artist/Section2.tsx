@@ -25,7 +25,7 @@ const cards = [
 ];
 
 export default function Section2(){
-  const [activeCategory, setActiveCategory] = useState("Popular");
+  const [activeCategory, setActiveCategory] = useState("All");
   return (
     <div className="m-10 mt-40 mb-40">
       {/* Header */}

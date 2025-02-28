@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -11,9 +12,11 @@ export default function HeroSection() {
             <button className="p-2 items-center justify-center flex text-[14px] font-medium text-white rounded-md transition-all w-full max-w-[90px] h-[34px] bg-gradient-to-tl from-[#FD0000] via-[#FD3B3B] to-[#FF9292]">
               Profile
             </button>
+            <Link href="/ArtistProfileSettings">
             <button className="p-2 items-center justify-center flex text-[14px] font-normal text-black rounded-md transition-all w-full max-w-[125px] h-[34px]">
               Profile Settings
             </button>
+            </Link>
           </div>
         </div>
 
