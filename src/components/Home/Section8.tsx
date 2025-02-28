@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SlCursor } from "react-icons/sl";
 
 export default function Section8() {
   return (
@@ -20,8 +21,9 @@ export default function Section8() {
             placeholder="Fantasy Creature holding a sword..."
             className="w-full h-full py-3 px-6 rounded-full focus:outline-none"
           />
-          <button className="absolute right-3 top-1/2 -translate-y-1/2 w-[100px] sm:w-[110px] md:w-[119px] h-[40px] sm:h-[45px] md:h-[50px] bg-[#FE0101] text-white font-roboto font-bold text-[16px] sm:text-[17px] md:text-[18px] leading-[21.09px] text-center rounded-2xl hover:bg-[#E00000]">
+          <button className="absolute flex items-center justify-center gap-2 right-3 top-1/2 -translate-y-1/2 w-[100px] sm:w-[110px] md:w-[119px] h-[40px] sm:h-[45px] md:h-[50px] bg-[#FE0101] text-white font-roboto font-bold text-[16px] sm:text-[17px] md:text-[18px] leading-[21.09px] text-center rounded-xl hover:bg-[#E00000]">
             Generate
+            <SlCursor size={10} />
           </button>
         </div>
 

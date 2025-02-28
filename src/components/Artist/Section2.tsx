@@ -14,9 +14,9 @@ const categories = [
 ];
 
 const cards = [
-  { id: 1, imageUrl: "/home/section2/cardImages/1.png" },
+  { id: 1, imageUrl: "/home/section2/cardImages/1.png", isNotMinted: true },
   { id: 2, imageUrl: "/home/section2/cardImages/2.png" },
-  { id: 3, imageUrl: "/home/section2/cardImages/3.png" },
+  { id: 3, imageUrl: "/home/section2/cardImages/3.png" , isNotMinted: true},
   { id: 4, imageUrl: "/home/section2/cardImages/4.png" , isSold: true},
   { id: 5, imageUrl: "/home/section2/cardImages/1.png" },
   { id: 6, imageUrl: "/home/section2/cardImages/2.png" , isSold: true},
@@ -61,7 +61,7 @@ export default function Section2(){
             key={card.id}
             className="flex justify-center w-full sm:w-[300px]"
           >
-            <Card imageUrl={card.imageUrl}  isSold={card.isSold} />
+            <Card imageUrl={card.imageUrl}  isSold={card.isSold} isNotMinted= {card.isNotMinted} />
           </div>
         ))}
       </div>

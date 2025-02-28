@@ -13,7 +13,7 @@ import Section10 from "@/components/Home/Section10";
 
 export default function HomePage() {
   return (
-    <div className="bg-gradient-to-b from-white to-pink-200">
+    <div className="bg-gradient-to-b from-white to-pink-200 w-screen overflow-hidden">
     <Navbar />
     <Hero />
     <Section2 />
