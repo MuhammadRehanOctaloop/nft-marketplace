@@ -80,8 +80,8 @@ const Navbar: React.FC = () => {
 
             {/* Navigation Links */}
             <ul className="space-y-4">
-              <li className="font-bold text-black">HOME</li>
-              <li className="font-bold text-black">AI NFT GENERATION</li>
+               <Link href="/"><li className="font-bold text-black">HOME</li></Link>
+               <Link href="/AiNFTGeneration"> <li className="font-bold text-black">AI NFT GENERATION</li></Link>
             </ul>
 
             {/* Buttons */}
