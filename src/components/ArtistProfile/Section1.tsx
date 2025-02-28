@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { BsCaretDown } from "react-icons/bs";
+import Link from "next/link";
 
 const sellers = [
   {
@@ -54,7 +55,9 @@ export default function Section6() {
         <div className="flex flex-row justify-between items-center w-full mb-6 gap-10">
           {/* Collection Button */}
           <button className="flex w-full max-w-[140px] h-[49px] text-[18px] text-[#FE0101] border-2 border-[#FE0101] justify-center items-center p-2 rounded-lg font-normal transition hover:bg-gray-100">
+          <Link href="/Artist">
             Collection
+          </Link>
           </button>
 
           {/* Filter Button */}

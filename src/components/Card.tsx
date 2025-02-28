@@ -65,7 +65,7 @@ const Card: React.FC<CardProps> = ({ imageUrl, isSold }) => {
         </div>
         {/* Sold Button (conditionally displayed) */}
         {isSold && (
-          <div className="absolute bottom-3 left-3 w-[280px] h-[300px] flex justify-center rounded-2xl items-center bg-gray-500 bg-opacity-10 backdrop-blur-sm z-999">
+          <div className="absolute bottom-3 left-3 w-[280px] h-[300px] flex justify-center rounded-2xl items-center bg-black-800 bg-opacity-10 backdrop-blur-sm z-999">
             <button className="px-4 py-2 text-white w-[96px] h-[37] font-semibold bg-gradient-to-tl from-[#FD0000] via-[#FD3B3B] to-[#FF9292] rounded-lg shadow-lg hover:scale-105 transition">
               Sold
             </button>
