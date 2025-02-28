@@ -54,7 +54,7 @@ const prompts = [
 
 export default function Section2() {
   return (
-    <div className="mt-40 m-10">
+    <div className="mt-16 sm:mt-40 m-10">
       <div className="w-full max-w-[1320] mx-auto">
         {/* Header Section */}
         <div className="flex flex-col items-center lg:items-start mb-6 gap-10">

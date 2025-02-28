@@ -60,7 +60,7 @@ const Hero = () => {
 
       {/* Image Section (Visible only on lg screens and above) */}
       <div className="hidden lg:block">
-        <div className="absolute flex items-center justify-center sm:flex-row flex-row top-[48%] left-[49%] transform -translate-x-1/2">
+        <div className="absolute flex items-center justify-center sm:flex-row flex-row top-[40%] left-[49%] transform -translate-x-1/2">
           <motion.div
             className="absolute bg-red-500 opacity-30 shadow-lg sm:block blur-[100px]"
             initial={{ opacity: 0 }}

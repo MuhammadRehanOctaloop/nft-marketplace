@@ -23,7 +23,7 @@ export default function Section9() {
   }, []);
 
   return (
-    <div className="mt-40 m-10">
+    <div className="mt-16 sm:mt-40 m-10">
       <div className="flex flex-col lg:flex-row items-center max-w-[1316px] h-full mx-auto">
         {/* Left Column: Text & Button */}
         <div className="flex-1 text-center lg:text-left ml-10">

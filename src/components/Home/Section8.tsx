@@ -3,7 +3,7 @@ import { SlCursor } from "react-icons/sl";
 
 export default function Section8() {
   return (
-    <div className="mt-40">
+    <div className="mt-16 sm:mt-40 m-10">
       {/* Header */}
       <div className="flex flex-col lg:flex-row max-w-[1316px] mx-auto mb-10 gap-5 items-center lg:items-end lg:justify-between">
         {/* Heading */}

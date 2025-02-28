@@ -14,7 +14,7 @@ const sellers = [
 
 export default function Section4() {
   return (
-    <div className="m-10 mt-40">
+    <div className="mt-16 sm:mt-40 m-10">
       <div className="max-w-[1316px] mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-center mb-6">
           <p className="text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-tight tracking-wide font-apex w-full text-center lg:text-left">

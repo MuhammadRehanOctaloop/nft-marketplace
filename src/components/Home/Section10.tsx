@@ -38,7 +38,7 @@ const Section10: React.FC = () => {
   };
 
   return (
-    <div className='mt-40 m-10'> 
+    <div className="mt-16 sm:mt-40 m-10"> 
 
     <div className="flex items-center justify-center max-w-[1056] h-full mx-auto">
       <div className="w-full max-w-2xl">

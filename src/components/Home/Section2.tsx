@@ -44,7 +44,7 @@ const Section2 = () => {
   };
 
   return (
-    <div className="m-10 mt-40">
+    <div className="m-10">
       <div className="flex w-full max-w-[1391px] my-10 flex-wrap mx-auto">
         <div className="flex flex-col w-full lg:flex-row mb-10 items-center lg:items-end">
           <div className="w-full text-center lg:text-left">

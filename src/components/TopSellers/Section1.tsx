@@ -157,7 +157,7 @@ const TopCollections = () => {
   ];
 
   return (
-    <div className="mt-40 mx-auto w-full max-w-[1320px] px-4">
+    <div className="mt-16 sm:mt-40 m-10 mx-auto w-full max-w-[1320px] px-4">
       {/* button */}
       <div className="grid grid-cols-2 h-[102px] items-center">
         <button className="flex items-center justify-between bg-white text-black text-[14px] font-semibold px-4 py-2 rounded-lg shadow-md border border-gray-300 hover:bg-gray-100 transition w-[130px] h-[45px]">

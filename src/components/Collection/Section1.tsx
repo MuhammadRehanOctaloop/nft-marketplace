@@ -20,7 +20,7 @@ const cards = [
 
 const Section2 = () => {
   return (
-    <div className="m-10 mt-40">
+    <div className="mt-16 sm:mt-40 m-10">
       <div className="flex flex-col max-w-[1316px] mx-auto mb-10 gap-5 items-end">
         {/* Search Bar */}
         <div className="relative w-full max-w-[613px] h-[55px] sm:w-[400px] self-end">
